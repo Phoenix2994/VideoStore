@@ -1,6 +1,6 @@
 <app-header></app-header>
 <ul>
   <li *ngFor="let movie of movies">
-    <app-movie-tab [movies]="movie"></app-movie-tab>
+    <app-movie-tab *ngIf = "show" (genre)="chooseGenre($event)" [movies]="movie"></app-movie-tab>
   </li>
 </ul>
