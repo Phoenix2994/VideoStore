@@ -7,10 +7,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   movies: any[];
-  show: boolean;
+  show: string;
 
   constructor() {
-    this.show = false;
+    this.show = 'All';
     this.movies = [];
     this.movies.push({ title: 'Rec', year: 2007, genre: 'Horror', movieDirector: 'Jaume Balagueró', duration: 78 });
     this.movies.push({ title: 'Seven', year: 1995, genre: 'Thriller', movieDirector: 'David Fincher', duration: 128 });
@@ -21,8 +21,8 @@ export class AppComponent {
     this.movies.push({ title: 'Inception', year: 2010, genre: 'Thriller', movieDirector: 'Christopher Nolan', duration: 148 });
   }
 
-  chooseGenre(e: string) {
-    this.show = true;
-    console.log(e);
+  chooseGenre(value: string) {
+    this.show = value;
+    console.log(value);
   }
 }
