@@ -1,3 +1,15 @@
-div{
-    background-color: rgb(250, 220, 165);
+div.movie-tab{
+    border: 5px solid blue;
+    background-color: rgb(141, 216, 235);
+    margin-bottom: 10px;
 }
+
+h1{
+    margin-left:0.67em;
+}
+
+p{
+    margin-left:2em;
+}
+
+
