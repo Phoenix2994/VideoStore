@@ -8,10 +8,17 @@ import { Component } from '@angular/core';
 export class AppComponent {
   movies: any[];
   show: string;
+  genres: any[];
 
   constructor() {
-    this.show = 'All';
+    this.show = 'Qualsiasi';
     this.movies = [];
+    this.genres = [];
+    this.pushMovies();
+    this.pushGenres();
+
+  }
+  pushMovies() {
     this.movies.push({ title: 'Rec', year: 2007, genre: 'Horror', movieDirector: 'Jaume Balagueró', duration: 78 });
     this.movies.push({ title: 'Seven', year: 1995, genre: 'Thriller', movieDirector: 'David Fincher', duration: 128 });
     this.movies.push({ title: 'Titanic', year: 1997, genre: 'Romantico', movieDirector: 'James Cameron', duration: 195 });
@@ -21,6 +28,14 @@ export class AppComponent {
     this.movies.push({ title: 'Inception', year: 2010, genre: 'Thriller', movieDirector: 'Christopher Nolan', duration: 148 });
   }
 
+  pushGenres() {
+    this.genres.push({ name: 'Avventura' });
+    this.genres.push({ name: 'Commedia' });
+    this.genres.push({ name: 'Horror' });
+    this.genres.push({ name: 'Romantico' });
+    this.genres.push({ name: 'Thriller' });
+    this.genres.push({ name: 'Qualsiasi' });
+  }
   chooseGenre(value: string) {
     this.show = value;
     console.log(value);

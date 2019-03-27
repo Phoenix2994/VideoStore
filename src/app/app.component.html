@@ -1,6 +1,6 @@
-<app-header (genre)="chooseGenre($event)"></app-header>
+<app-header (genre)="chooseGenre($event)" [genres]="genres"></app-header>
 <ul>
   <li *ngFor="let movie of movies">
-    <app-movie-tab *ngIf = "movie.genre == show || show == 'All'" [movies]="movie"></app-movie-tab>
+    <app-movie-tab *ngIf = "movie.genre == show || show == 'Qualsiasi'" [movies]="movie"></app-movie-tab>
   </li>
 </ul> 

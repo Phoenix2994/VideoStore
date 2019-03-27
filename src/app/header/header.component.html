@@ -1,5 +1,4 @@
-
-<div >
+<div>
   <div>
     <h1>
       La mia videoteca
@@ -7,12 +6,14 @@
     <h2>
       La mia videoteca contiene film appartenenti a generi differenti
     </h2>
-  </div> 
+  </div>
   <div style="height:3em;">
-    <button (click)="chooseGenre('Avventura')"> Avventura </button>
+    <button *ngFor="let genre of genres" (click)="chooseGenre(genre.name)"> {{genre.name}} </button>
+    <!--
     <button (click)="chooseGenre('Commedia')"> Commedia </button>
     <button (click)="chooseGenre('Horror')"> Horror </button>
     <button (click)="chooseGenre('Romantico')"> Romantico </button>
     <button (click)="chooseGenre('Thriller')"> Thriller </button>
+    <button (click)="chooseGenre('Qualsiasi')"> Qualsiasi </button>-->
   </div>
 </div>

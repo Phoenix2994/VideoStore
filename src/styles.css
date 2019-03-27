@@ -2,3 +2,23 @@
 body{
     background-color: azure;
 }
+
+button {
+    font-family: Arial;
+    background-color: #eee;
+    border: 2px solid blue;
+    padding: 5px 10px;
+    margin:10px;
+    border-radius: 4px;
+    cursor: pointer;
+    cursor: hand;
+  }
+  button:hover {
+    color: #039be5;
+    background-color: #cfd8dc;
+  }
+  button:disabled {
+    background-color: #eee;
+    color: #aaa;
+    cursor: auto;
+  }
