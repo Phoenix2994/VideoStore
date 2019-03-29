@@ -1,4 +1,8 @@
 import { Component } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+
+import { Movie } from './movies-list';
+import { MovieService } from './movie.service';
 
 @Component({
   selector: 'app-root',
@@ -6,18 +10,29 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  movies: any[];
+  movieSelected: Movie;
+  movies: Movie[];
   show: string;
   genres: any[];
 
-  constructor() {
+  constructor(public movieService: MovieService, private route: ActivatedRoute) {
     this.show = 'Qualsiasi';
     this.movies = [];
     this.genres = [];
-    this.pushMovies();
+    this.getMovies();
     this.pushGenres();
-
   }
+
+  getMovies(): void {
+    this.movieService.getMovies()
+      .subscribe(movies => this.movies = movies);
+  }
+
+  getTitle(): string {
+    return this.movieService.title;
+  }
+
+  /*
   pushMovies() {
     this.movies.push({ title: 'Rec', year: 2007, genre: 'Horror', movieDirector: 'Jaume Balagueró', duration: 78 });
     this.movies.push({ title: 'Seven', year: 1995, genre: 'Thriller', movieDirector: 'David Fincher', duration: 128 });
@@ -27,7 +42,7 @@ export class AppComponent {
     this.movies.push({ title: 'Non ci resta che piangere', year: 1984, genre: 'Commedia', movieDirector: 'Massimo Troisi', duration: 145 });
     this.movies.push({ title: 'Inception', year: 2010, genre: 'Thriller', movieDirector: 'Christopher Nolan', duration: 148 });
   }
-
+*/
   pushGenres() {
     this.genres.push({ name: 'Avventura' });
     this.genres.push({ name: 'Commedia' });
