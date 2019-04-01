@@ -11,16 +11,25 @@ import { MovieService } from '../movie.service';
 })
 export class HeaderComponent implements OnInit {
 
-  @Input() genres: any;
-  @Output() genre = new EventEmitter<string>();
+  genres: string[];
 
-  constructor(private location: Location, public movieService: MovieService, private route: ActivatedRoute) { }
+  ngOnInit(): void {
+  }
+
+  constructor(public movieService: MovieService) {
+    this.genres = [];
+    this.getGenres();
+  }
 
   chooseGenre(value: string) {
-    this.genre.emit(value);
+    this.movieService.setGenre(value);
   }
 
-  ngOnInit() {
+  getGenres(): void {
+    this.movieService.getGenres()
+      .subscribe(genres => this.genres = genres);
   }
+
+
 
 }

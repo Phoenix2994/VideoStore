@@ -1,8 +1,2 @@
-<app-header (genre)="chooseGenre($event)" [genres]="genres"></app-header>
-<ul>
-  <li *ngFor="let movie of movies">
-    <app-movie-tab *ngIf="(movie.genre == show || show == 'Qualsiasi'|| show == '') || show == movie.title" [movies]="movie"
-      (click)='getTitle()'></app-movie-tab>
-  </li>
-</ul>
+<app-header></app-header>
 <router-outlet></router-outlet>

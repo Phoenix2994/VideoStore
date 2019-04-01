@@ -1,0 +1,6 @@
+<ul>
+  <li *ngFor="let movie of movies">
+    <app-movie-tab *ngIf=" movie.genre == checkGenre() || checkGenre() == 'Qualsiasi'"
+      [movies]="movie"></app-movie-tab>
+  </li>
+</ul>
