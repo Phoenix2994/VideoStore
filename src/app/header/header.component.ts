@@ -18,7 +18,6 @@ export class HeaderComponent implements OnInit {
 
   chooseGenre(value: string) {
     this.genre.emit(value);
-    this.movieService.title = '';
   }
 
   ngOnInit() {

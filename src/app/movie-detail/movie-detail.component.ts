@@ -30,7 +30,6 @@ export class MovieDetailComponent implements OnInit {
       .subscribe(movie => this.movie = movie);
   }
 
-
   goBack(): void {
     this.location.back();
   }
