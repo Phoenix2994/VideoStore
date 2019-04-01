@@ -18,7 +18,6 @@ export class MovieService {
   }
 
   getMovie(title: string): Observable<Movie> {
-
     return of(MOVIES.find(movie => movie.title === title));
   }
 

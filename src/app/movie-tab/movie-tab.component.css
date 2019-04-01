@@ -6,6 +6,8 @@ div.movie-tab{
 
 h1{
     margin-left:0.67em;
+    cursor: pointer;
+    cursor: hand;
 }
 
 p{

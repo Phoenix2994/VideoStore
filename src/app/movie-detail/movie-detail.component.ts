@@ -20,10 +20,10 @@ export class MovieDetailComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
-    this.getMovie();
+    this.chooseMovie();
   }
 
-  getMovie(): void {
+  chooseMovie(): void {
     const title = this.route.snapshot.paramMap.get('title');
     this.movieService.title = title;
     this.movieService.getMovie(title)

@@ -8,12 +8,6 @@
     </h2>
   </div>
   <div style="height:3em;">
-    <button *ngFor="let genre of genres" (click)="chooseGenre(genre.name)"> {{genre.name}} </button>
-    <!--
-    <button (click)="chooseGenre('Commedia')"> Commedia </button>
-    <button (click)="chooseGenre('Horror')"> Horror </button>
-    <button (click)="chooseGenre('Romantico')"> Romantico </button>
-    <button (click)="chooseGenre('Thriller')"> Thriller </button>
-    <button (click)="chooseGenre('Qualsiasi')"> Qualsiasi </button>-->
+    <button *ngFor="let genre of genres" (click)="chooseGenre(genre.name)" routerLink=""> {{genre.name}} </button>
   </div>
 </div>

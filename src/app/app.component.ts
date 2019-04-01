@@ -28,8 +28,8 @@ export class AppComponent {
       .subscribe(movies => this.movies = movies);
   }
 
-  getTitle(): string {
-    return this.movieService.title;
+  getTitle() {
+    this.show = this.movieService.title;
   }
 
   /*
@@ -42,7 +42,7 @@ export class AppComponent {
     this.movies.push({ title: 'Non ci resta che piangere', year: 1984, genre: 'Commedia', movieDirector: 'Massimo Troisi', duration: 145 });
     this.movies.push({ title: 'Inception', year: 2010, genre: 'Thriller', movieDirector: 'Christopher Nolan', duration: 148 });
   }
-*/
+  */
   pushGenres() {
     this.genres.push({ name: 'Avventura' });
     this.genres.push({ name: 'Commedia' });

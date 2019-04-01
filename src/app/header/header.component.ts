@@ -1,4 +1,8 @@
 import { Component, OnInit, EventEmitter, Output, Input } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import { Location } from '@angular/common';
+
+import { MovieService } from '../movie.service';
 
 @Component({
   selector: 'app-header',
@@ -10,11 +14,13 @@ export class HeaderComponent implements OnInit {
   @Input() genres: any;
   @Output() genre = new EventEmitter<string>();
 
-  constructor() { }
+  constructor(private location: Location, public movieService: MovieService, private route: ActivatedRoute) { }
 
   chooseGenre(value: string) {
     this.genre.emit(value);
+    this.movieService.title = '';
   }
+
   ngOnInit() {
   }
 
