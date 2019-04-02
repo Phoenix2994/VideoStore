@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
-import { Movie } from '../movies-list';
+import { Movie } from '../model/movie';
 import { MovieService } from '../movie.service';
 
 @Component({
@@ -10,22 +10,27 @@ import { MovieService } from '../movie.service';
 })
 export class DashboardComponent implements OnInit {
   movies: Movie[];
+  genre: string;
 
   ngOnInit() {
   }
 
-  constructor(public movieService: MovieService ) {
+  constructor(public movieService: MovieService) {
     this.movies = [];
     this.getMovies();
+    this.genre = 'Qualsiasi';
   }
 
   getMovies(): void {
     this.movieService.getMovies()
       .subscribe(movies => this.movies = movies);
   }
-
-  checkGenre(): string {
-    return this.movieService.getGenre();
+  /*
+    getChoosenGenre(): string {
+      return this.movieService.getGenre();
+    }
+  */
+  chooseGenre(value: string) {
+    this.genre = value;
   }
-
 }

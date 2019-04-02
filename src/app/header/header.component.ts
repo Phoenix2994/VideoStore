@@ -1,6 +1,4 @@
 import { Component, OnInit, EventEmitter, Output, Input } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
-import { Location } from '@angular/common';
 
 import { MovieService } from '../movie.service';
 
@@ -13,6 +11,8 @@ export class HeaderComponent implements OnInit {
 
   genres: string[];
 
+  @Output() genre = new EventEmitter<string>();
+
   ngOnInit(): void {
   }
 
@@ -20,9 +20,14 @@ export class HeaderComponent implements OnInit {
     this.genres = [];
     this.getGenres();
   }
+  /*
+    chooseGenre(value: string) {
+      this.movieService.setGenre(value);
+    }
+  */
 
   chooseGenre(value: string) {
-    this.movieService.setGenre(value);
+    this.genre.emit(value);
   }
 
   getGenres(): void {

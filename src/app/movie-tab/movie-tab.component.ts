@@ -1,4 +1,5 @@
-import { Component, OnInit, Input, Output } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { Movie } from '../model/movie';
 
 @Component({
   selector: 'app-movie-tab',
@@ -7,7 +8,7 @@ import { Component, OnInit, Input, Output } from '@angular/core';
 })
 export class MovieTabComponent implements OnInit {
 
-  @Input() movies: any;
+  @Input() movie: Movie;
 
   constructor() {
   }

@@ -3,7 +3,7 @@ import { ActivatedRoute } from '@angular/router';
 import { Location } from '@angular/common';
 
 import { MovieService } from '../movie.service';
-import { Movie } from '../movies-list';
+import { Movie } from '../model/movie';
 
 @Component({
   selector: 'app-movie-detail',
@@ -25,7 +25,7 @@ export class MovieDetailComponent implements OnInit {
 
   chooseMovie(): void {
     const title = this.route.snapshot.paramMap.get('title');
-    this.movieService.title = title;
+    this.movieService.setTitle(title);
     this.movieService.getMovie(title)
       .subscribe(movie => this.movie = movie);
   }
