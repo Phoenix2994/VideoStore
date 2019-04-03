@@ -8,6 +8,7 @@
     </h2>
   </div>
   <div style="height:3em;">
-    <button *ngFor="let genre of genres" (click)="chooseGenre(genre)" routerLink=""> {{genre}} </button>
+    <button *ngFor="let genre of genres" routerLink=""> {{genre}}
+    </button>
   </div>
 </div>

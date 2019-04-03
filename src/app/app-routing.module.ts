@@ -5,9 +5,16 @@ import { MovieDetailComponent } from './movie-detail/movie-detail.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 
 const routes: Routes = [
-  { path: '', redirectTo: '/dashboard', pathMatch: 'full' },
-  { path: 'dashboard', component: DashboardComponent },
-  { path: 'dashboard/:title', component: MovieDetailComponent },
+  {
+    path: 'adventure',
+    loadChildren: './adventure/adventure.module#AdventureModule'
+  },
+  {
+    path: 'comedy',
+    loadChildren: './comedy/comedy.module#ComedyModule'
+  },
+  { path: '', redirectTo: '', pathMatch: 'full' },
+  { path: 'dashboard', component: DashboardComponent }
 ];
 
 @NgModule({
