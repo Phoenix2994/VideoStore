@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 
+import { Movie } from '../model/movie';
+import { MovieService } from '../movie.service';
+
 @Component({
   selector: 'app-adventure',
   templateUrl: './adventure.component.html',
@@ -7,7 +10,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AdventureComponent implements OnInit {
 
-  constructor() { }
+  movies: Movie[];
+
+  constructor(public movieService: MovieService) {
+    this.getMovies();
+  }
+
+  getMovies(): void {
+    this.movieService.getMovies('Adventure')
+      .subscribe(movies => this.movies = movies);
+  }
 
   ngOnInit() {
   }

@@ -1,6 +1,6 @@
 <div class='movie-tab'>
   <div>
-    <h1 routerLink="/dashboard/{{movie.title}}">{{movie.title}}</h1>
+    <h1 routerLink="/dashboard/{{movie.genre|lowercase}}/{{movie.title}}">{{movie.title}}</h1>
   </div>
   <div>
     <p><b>Anno:</b> <i> {{movie.year}}</i></p>

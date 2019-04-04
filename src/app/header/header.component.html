@@ -8,7 +8,7 @@
     </h2>
   </div>
   <div style="height:3em;">
-    <button *ngFor="let genre of genres" routerLink=""> {{genre}}
+    <button *ngFor="let genre of genres" routerLink="/dashboard/{{genre|lowercase}}"> {{genre}}
     </button>
   </div>
 </div>

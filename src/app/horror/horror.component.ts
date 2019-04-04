@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 
+import { Movie } from '../model/movie';
+import { MovieService } from '../movie.service';
+
 @Component({
   selector: 'app-horror',
   templateUrl: './horror.component.html',
@@ -7,8 +10,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HorrorComponent implements OnInit {
 
-  constructor() { }
+  movies: Movie[];
 
+  constructor(public movieService: MovieService) {
+    this.getMovies();
+  }
+
+  getMovies(): void {
+    this.movieService.getMovies('Horror')
+      .subscribe(movies => this.movies = movies);
+  }
   ngOnInit() {
   }
 
