@@ -6,23 +6,23 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 const routes: Routes = [
   {
     path: 'dashboard/adventure',
-    loadChildren: './adventure/adventure.module#AdventureModule'
+    loadChildren: './movie-categories/adventure/adventure.module#AdventureModule'
   },
   {
     path: 'dashboard/comedy',
-    loadChildren: './comedy/comedy.module#ComedyModule'
+    loadChildren: './movie-categories/comedy/comedy.module#ComedyModule'
   },
   {
     path: 'dashboard/horror',
-    loadChildren: './horror/horror.module#HorrorModule'
+    loadChildren: './movie-categories/horror/horror.module#HorrorModule'
   },
   {
     path: 'dashboard/thriller',
-    loadChildren: './thriller/thriller.module#ThrillerModule'
+    loadChildren: './movie-categories/thriller/thriller.module#ThrillerModule'
   },
   {
     path: 'dashboard/romantic',
-    loadChildren: './romantic/romantic.module#RomanticModule'
+    loadChildren: './movie-categories/romantic/romantic.module#RomanticModule'
   },
   { path: '', redirectTo: 'dashboard', pathMatch: 'full' },
   { path: 'dashboard', component: DashboardComponent }

@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 
 import { ComedyRoutingModule } from './comedy-routing.module';
 import { ComedyComponent } from './comedy.component';
-import { SharedModule } from '../shared/shared.module';
+import { SharedModule } from '../../shared/shared.module';
 
 
 

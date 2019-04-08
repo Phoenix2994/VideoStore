@@ -1,11 +1,11 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { ThrillerComponent } from './thriller.component';
-import { MovieDetailComponent } from '../movie-detail/movie-detail.component';
+import { HorrorComponent } from './horror.component';
+import { MovieDetailComponent } from '../../movie-detail/movie-detail.component';
 
 const routes: Routes = [{
   path: '',
-  component: ThrillerComponent
+  component: HorrorComponent
 },
 {
   path: ':title',
@@ -16,4 +16,4 @@ const routes: Routes = [{
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule]
 })
-export class ThrillerRoutingModule { }
+export class HorrorRoutingModule { }
