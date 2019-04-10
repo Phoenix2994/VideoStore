@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { MOVIES, GENRES } from './movies-list';
+import { MOVIES, CATEGORIES } from './movies-list';
 
 import { Observable, of } from 'rxjs';
 import { Movie } from './model/movie';
@@ -8,29 +8,18 @@ import { Movie } from './model/movie';
   providedIn: 'root'
 })
 export class MovieService {
-
-  title: string;
   movies: Movie[];
 
   constructor() {
-    this.title = '';
   }
 
   getMovies(value: string): Observable<Movie[]> {
     this.movies = MOVIES.sort(this.sortByTitle);
-    return of(this.movies.filter(element => (element.genre === value)));
+    return of(this.movies.filter(element => (element.category === value)));
   }
 
-  getGenres(): Observable<string[]> {
-    return of(GENRES);
-  }
-
-  getTitle() {
-    return this.title;
-  }
-
-  setTitle(value: string) {
-    this.title = value;
+  getCategories(): Observable<string[]> {
+    return of(CATEGORIES);
   }
 
   getMovie(title: string): Observable<Movie> {

@@ -10,28 +10,28 @@ import { SearchService } from '../search.service';
 })
 export class HeaderComponent implements OnInit {
   expression: string;
-  genres: string[];
+  categories: string[];
 
-  @Output() genre = new EventEmitter<string>();
+  @Output() category = new EventEmitter<string>();
 
   ngOnInit(): void {
-    this.getGenres();
+    this.getCategories();
     this.searchService.expression.
       subscribe(expression => this.expression = expression);
   }
 
   constructor(public movieService: MovieService, public searchService: SearchService) {
-    this.genres = [];
+    this.categories = [];
     this.expression = '';
   }
 
-  chooseGenre(value: string) {
-    this.genre.emit(value);
+  chooseCategory(value: string) {
+    this.category.emit(value);
   }
 
-  getGenres(): void {
-    this.movieService.getGenres()
-      .subscribe(genres => this.genres = genres);
+  getCategories(): void {
+    this.movieService.getCategories()
+      .subscribe(categories => this.categories = categories);
   }
 
   setSearchingTerm() {

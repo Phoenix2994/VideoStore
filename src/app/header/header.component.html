@@ -9,7 +9,7 @@
   </div>
   <div style="height:3em;">
     <input [(ngModel)]="expression" (ngModelChange)="setSearchingTerm()" placeholder="Search movie..." />
-    <button *ngFor="let genre of genres" routerLink="/dashboard/{{genre|lowercase}}"> {{genre}}
+    <button *ngFor="let category of categories" routerLink="/dashboard/{{category|lowercase}}"> {{category}}
     </button>
   </div>
 </div>
