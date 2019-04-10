@@ -1,3 +1,4 @@
 <div *ngFor="let movie of movies">
-  <app-movie-tab [movie]="movie"></app-movie-tab>
+  <app-movie-tab *ngIf='(movie.title | lowercase).includes(expression | lowercase) || expression == undefined'
+    [movie]="movie"></app-movie-tab>
 </div>

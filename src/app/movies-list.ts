@@ -9,7 +9,21 @@ export const MOVIES: Movie[] = [
   { title: 'I Simpson ', year: 2007, genre: 'Comedy', movieDirector: 'David Silverman', duration: 87, plot },
   { title: 'Jurassic Park', year: 1997, genre: 'Adventure', movieDirector: 'Steven Spielberg', duration: 127, plot},
   { title: 'Non ci resta che piangere', year: 1984, genre: 'Comedy', movieDirector: 'Massimo Troisi', duration: 145, plot},
-  { title: 'Inception', year: 2010, genre: 'Thriller', movieDirector: 'Christopher Nolan', duration: 148, plot}
+  { title: 'Inception', year: 2010, genre: 'Thriller', movieDirector: 'Christopher Nolan', duration: 148, plot},
+  { title: 'Rec 2', year: 2007, genre: 'Horror', movieDirector: 'Jaume Balagueró', duration: 78, plot },
+  { title: 'Eight', year: 1995, genre: 'Thriller', movieDirector: 'David Fincher', duration: 128, plot},
+  { title: 'Frozen', year: 1997, genre: 'Romantic', movieDirector: 'James Cameron', duration: 195, plot},
+  { title: 'I Griffin ', year: 2007, genre: 'Comedy', movieDirector: 'David Silverman', duration: 87, plot },
+  { title: 'Jurassic Park 2', year: 1997, genre: 'Adventure', movieDirector: 'Steven Spielberg', duration: 127, plot},
+  { title: 'La vita è bella', year: 1984, genre: 'Comedy', movieDirector: 'Massimo Troisi', duration: 145, plot},
+  { title: 'Prova a prendermi', year: 2010, genre: 'Thriller', movieDirector: 'Christopher Nolan', duration: 148, plot},
+  { title: 'Esorcista', year: 2007, genre: 'Horror', movieDirector: 'Jaume Balagueró', duration: 78, plot },
+  { title: 'Nein', year: 1995, genre: 'Thriller', movieDirector: 'David Fincher', duration: 128, plot},
+  { title: 'Via col vento', year: 1997, genre: 'Romantic', movieDirector: 'James Cameron', duration: 195, plot},
+  { title: 'Futurama ', year: 2007, genre: 'Comedy', movieDirector: 'David Silverman', duration: 87, plot },
+  { title: 'Jurassic World', year: 1997, genre: 'Adventure', movieDirector: 'Steven Spielberg', duration: 127, plot},
+  { title: 'Non lo so', year: 1984, genre: 'Comedy', movieDirector: 'Massimo Troisi', duration: 145, plot},
+  { title: 'Departed', year: 2010, genre: 'Thriller', movieDirector: 'Christopher Nolan', duration: 148, plot}
 ];
 
 export const GENRES: string[] = [
