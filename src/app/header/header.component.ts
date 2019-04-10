@@ -20,7 +20,7 @@ export class HeaderComponent implements OnInit {
       subscribe(expression => this.expression = expression);
   }
 
-  constructor(public movieService: MovieService, public searchService: SearchService) {
+  constructor(private movieService: MovieService, private searchService: SearchService) {
     this.categories = [];
     this.expression = '';
   }

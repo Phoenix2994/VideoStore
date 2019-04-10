@@ -15,7 +15,7 @@ export class MovieDetailComponent implements OnInit {
 
   constructor(
     private route: ActivatedRoute,
-    public movieService: MovieService,
+    private movieService: MovieService,
     private location: Location
   ) { }
 

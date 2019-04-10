@@ -13,10 +13,7 @@ export class ComedyComponent implements OnInit {
   expression: string;
   movies: Movie[];
 
-  constructor(public movieService: MovieService, public searchService: SearchService) {
-    this.getMovies();
-    this.getSearchingTerm();
-  }
+  constructor(private movieService: MovieService, private searchService: SearchService) { }
 
   getMovies(): void {
     this.movieService.getMovies('Comedy')
@@ -29,6 +26,8 @@ export class ComedyComponent implements OnInit {
   }
 
   ngOnInit() {
+    this.getMovies();
+    this.getSearchingTerm();
     this.searchService.expression.next('');
   }
 
