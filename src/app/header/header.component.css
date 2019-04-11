@@ -1,8 +1,7 @@
-div{
-   display:table;
+div {
+   display: table;
    width: -webkit-fill-available;
    height: 10em;
-   text-align:center;
-   vertical-align:middle;
+   text-align: center;
+   vertical-align: middle;
 }
-

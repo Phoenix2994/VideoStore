@@ -1,24 +1,27 @@
 /* You can add global styles to this file, and also import other style files */
-body{
-    background-color: azure;
+
+body {
+  background-color: azure;
 }
 
 button {
-    font-family: Arial;
-    background-color: #eee;
-    border: 2px solid blue;
-    padding: 5px 10px;
-    margin-left:10px;
-    border-radius: 4px;
-    cursor: pointer;
-    cursor: hand;
-  }
-  button:hover {
-    color: #039be5;
-    background-color: #cfd8dc;
-  }
-  button:disabled {
-    background-color: #eee;
-    color: #aaa;
-    cursor: auto;
-  }
+  font-family: Arial;
+  background-color: #eee;
+  border: 2px solid blue;
+  padding: 5px 10px;
+  margin-left: 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  cursor: hand;
+}
+
+button:hover {
+  color: #039be5;
+  background-color: #cfd8dc;
+}
+
+button:disabled {
+  background-color: #eee;
+  color: #aaa;
+  cursor: auto;
+}

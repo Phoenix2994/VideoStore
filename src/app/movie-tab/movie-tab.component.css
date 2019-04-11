@@ -1,17 +1,15 @@
-div.movie-tab{
+div.movie-tab {
     border: 5px solid blue;
     background-color: rgb(141, 216, 235);
     margin-bottom: 10px;
 }
 
-h1{
-    margin-left:0.67em;
+h1 {
+    margin-left: 0.67em;
     cursor: pointer;
     cursor: hand;
 }
 
-p{
-    margin-left:2em;
+p {
+    margin-left: 2em;
 }
-
-
